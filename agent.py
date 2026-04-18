@@ -2,7 +2,6 @@ from langgraph.prebuilt import create_react_agent
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from langgraph_supervisor import create_supervisor
-from langchain_groq import ChatGroq
 from langchain_ollama import ChatOllama
 import os
 from tools import search_tool, custom_math_tool, wiki_tool
@@ -15,8 +14,8 @@ if not groq_api_key:
     print("Error: GROQ_API_KEY environment variable not set.")
     exit(1)
 
-llm1 = ChatGroq(model='meta-llama/llama-4-scout-17b-16e-instruct',
-                api_key=groq_api_key)
+# llm1 = ChatGroq(model='meta-llama/llama-4-scout-17b-16e-instruct',
+                # api_key=groq_api_key)
 
 llm2 = ChatOllama(model='mistral:latest')
 
