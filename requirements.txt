@@ -1,7 +1,8 @@
 boto3
-duckduckgo_search
+ddgs
 langchain
 langchain-ollama
 langgraph
 langgraph-supervisor
 numpy
+python-dotenv
